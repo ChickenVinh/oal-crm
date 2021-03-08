@@ -4,13 +4,13 @@ import PrivateRoute from "./components/PrivateRoute";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import AddUser from "./components/AddUser";
-import Nav from "./components/Nav";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <Router>
       <AuthProvider>
-        <Nav />
+        <NavBar />
         <Switch>
           <PrivateRoute exact path="/" component={Dashboard} />
           <PrivateRoute exact path="/addUser" component={AddUser} />
