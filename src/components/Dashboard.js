@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 function Dashboard() {
   return (
     <Container>
-      <h1>Hello, you signed in successfully!</h1>
+      <h1>Huong is smelly today!</h1>
       <Link to="/addCustomer" className="btn btn-primary">
         add User
       </Link>

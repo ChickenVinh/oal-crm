@@ -25,42 +25,48 @@ function NavBar() {
 
   return currentUser ? (
     <Container>
-      <Navbar>
+      <Navbar collapseOnSelect expand="lg">
         <Navbar.Brand>
           <img src="/images/logo.svg" height="40" alt="oal logo" />
         </Navbar.Brand>
-        <div className="w-100">
-          {error && <Alert variant="danger">{error}</Alert>}
-        </div>
-        <Nav>
-          <Link to="/" className="nav-link">
-            Dashboard
-          </Link>
-          <NavDropdown title="Kunde">
-            <NavDropdown.Item>
-              {" "}
-              <Link to="/addCustomer" className="nav-link">
-                Kunde hinzufügen
-              </Link>
-            </NavDropdown.Item>
-            <NavDropdown.Item>
-              {" "}
-              <Link to="/addDocument" className="nav-link">
-                Dokument hinzufügen
-              </Link>
-            </NavDropdown.Item>
-            <NavDropdown.Item>
-              {" "}
-              <Link to="/manageCustomer" className="nav-link">
-                Kunden verwalten
-              </Link>
-            </NavDropdown.Item>
-          </NavDropdown>
-          <NavDropdown title={currentUser.email}>
-            <NavDropdown.Item>Einstellungen</NavDropdown.Item>
-            <NavDropdown.Item onClick={handleLogout}>Log Out</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="justify-content-end"
+        >
+          <Nav>
+            <Link to="/" className="nav-link">
+              Dashboard
+            </Link>
+            <NavDropdown title="Kunde">
+              <NavDropdown.Item>
+                {" "}
+                <Link to="/addCustomer" className="nav-link">
+                  Kunde hinzufügen
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                {" "}
+                <Link to="/addDocument" className="nav-link">
+                  Dokument hinzufügen
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                {" "}
+                <Link to="/manageCustomer" className="nav-link">
+                  Kunden verwalten
+                </Link>
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title={currentUser.email}>
+              <NavDropdown.Item>Einstellungen</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleLogout}>
+                Log Out
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </Container>
   ) : (
