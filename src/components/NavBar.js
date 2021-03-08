@@ -39,19 +39,19 @@ function NavBar() {
           <NavDropdown title="Kunde">
             <NavDropdown.Item>
               {" "}
-              <Link to="/addUser" className="nav-link">
+              <Link to="/addCustomer" className="nav-link">
                 Kunde hinzufügen
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item>
               {" "}
-              <Link to="/addUser" className="nav-link">
+              <Link to="/addDocument" className="nav-link">
                 Dokument hinzufügen
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item>
               {" "}
-              <Link to="/addUser" className="nav-link">
+              <Link to="/manageCustomer" className="nav-link">
                 Kunden verwalten
               </Link>
             </NavDropdown.Item>

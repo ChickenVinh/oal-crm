@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-function AddUser() {
+function AddCustomer() {
   return (
     <div>
-      <h1>Add User</h1>
+      <h1>Add Costumer</h1>
       <Link to="/" className="btn btn-primary">
         Dashboard
       </Link>
@@ -11,4 +11,4 @@ function AddUser() {
   );
 }
 
-export default AddUser;
+export default AddCustomer;

@@ -6,7 +6,7 @@ function Dashboard() {
   return (
     <Container>
       <h1>Hello, you signed in successfully!</h1>
-      <Link to="/addUser" className="btn btn-primary">
+      <Link to="/addCustomer" className="btn btn-primary">
         add User
       </Link>
     </Container>
