@@ -28,10 +28,15 @@ function SignIn() {
   }
 
   return (
-    <Container>
-      <h1>Sign In</h1>
+    <Container className="mt-5">
+      <img
+        src="/images/logo.svg"
+        className="mx-auto d-block"
+        height="70"
+        alt="oal logo"
+      />
       {error && <Alert variant="danger">{error}</Alert>}
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} className="mt-4">
         <Form.Group id="email">
           <Form.Label>Email:</Form.Label>
           <Form.Control
